@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alzheimer's Disease Prediction</title>
+</head>
+<body>
+    <h1>Alzheimer's Disease Prediction</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="option">Select Prediction Option:</label>
+        <select name="option" id="option">
+            <option value="pet">PET Only</option>
+            <option value="mri">MRI Only</option>
+            <option value="fusion">MRI + PET (Late Fusion)</option>
+        </select>
+        <br><br>
+        <label for="pet_image">Upload PET Image:</label>
+        <input type="file" name="pet_image" id="pet_image">
+        <br><br>
+        <label for="mri_image">Upload MRI Image:</label>
+        <input type="file" name="mri_image" id="mri_image">
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
